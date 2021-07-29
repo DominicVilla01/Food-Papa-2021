@@ -1,0 +1,2 @@
+rootProject.name = "Food Papa 2021"
+include ':app'
