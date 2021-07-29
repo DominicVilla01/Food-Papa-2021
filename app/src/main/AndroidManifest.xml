@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodPapa2021">
-        <activity android:name=".LoginPage_"></activity>
+        <activity android:name=".Test"></activity>
+        <activity android:name=".LoginPage_" />
         <activity android:name=".GetStarted_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
