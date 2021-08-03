@@ -15,11 +15,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".SignUp_"></activity>
+        android:theme="@style/Theme.FoodPapa2021">
+        <activity android:name=".OrderSuccess_"></activity>
+        <activity android:name=".Cart_" />
+        <activity android:name=".FoodDetail_" />
+        <activity android:name=".RestaurantPage_" />
+        <activity android:name=".OrderPage_" />
+        <activity
+            android:name=".SignUp_"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".user_settings.EditUser_" />
-        <activity android:name=".LoginPage_" />
-        <activity android:name=".GetStarted_">
+        <activity
+            android:name=".LoginPage_"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".GetStarted_"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

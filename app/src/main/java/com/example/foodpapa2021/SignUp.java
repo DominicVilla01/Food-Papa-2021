@@ -65,7 +65,7 @@ public class SignUp extends AppCompatActivity {
         {
             Toast.makeText(this, "Name cannot be blank", Toast.LENGTH_SHORT).show();
         }
-        else if(pass.equals("") | passC.equals("")) //Password cannot be blank
+        else if(pass.equals("") && passC.equals("")) //Password cannot be blank
         {
             Toast.makeText(this, "Password cannot be blank", Toast.LENGTH_SHORT).show();
         }
@@ -77,7 +77,7 @@ public class SignUp extends AppCompatActivity {
         {
             //Find the object if it's in the database...[this returns a null if none]
             User result = realm.where(User.class)
-                               .equalTo("username", user)
+                               .equalTo("name", user)
                                .findFirst();
 
             //Allow the user to register if the credentials are unique

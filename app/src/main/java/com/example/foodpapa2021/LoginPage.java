@@ -115,6 +115,9 @@ public class LoginPage extends AppCompatActivity {
                 boolean cboxValue = remember.isChecked();
                 edit.putBoolean("remember", cboxValue);
                 edit.apply();
+
+                //Order Page
+                OrderPage_.intent(this).start();
             }
             else
             {
