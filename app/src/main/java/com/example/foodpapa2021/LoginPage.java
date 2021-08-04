@@ -3,6 +3,7 @@ package com.example.foodpapa2021;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
+import android.graphics.Paint;
 import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
@@ -58,6 +59,9 @@ public class LoginPage extends AppCompatActivity {
     @AfterViews
     public void init()
     {
+        //Underline Register here!
+        register.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+
         //Initialize Realm
         realm = Realm.getDefaultInstance();
 
@@ -117,7 +121,7 @@ public class LoginPage extends AppCompatActivity {
                 edit.apply();
 
                 //Order Page
-                OrderPage_.intent(this).start();
+                FoodDetail_.intent(this).start();
             }
             else
             {

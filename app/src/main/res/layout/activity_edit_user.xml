@@ -82,11 +82,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginEnd="248dp"
-            android:layout_marginRight="248dp"
             android:text="Confirm Password:"
             app:layout_constraintBottom_toTopOf="@+id/register_confirm"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/register_pass"
             app:layout_constraintVertical_bias="1.0" />
@@ -129,11 +126,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginEnd="269dp"
-            android:layout_marginRight="269dp"
             android:text="New Password:"
             app:layout_constraintBottom_toTopOf="@+id/register_pass"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/register_name"
             app:layout_constraintVertical_bias="1.0" />
@@ -145,13 +139,10 @@
             android:layout_marginStart="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="46dp"
-            android:layout_marginEnd="300dp"
-            android:layout_marginRight="300dp"
             android:gravity="center"
             android:text="Username:"
             app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toTopOf="@+id/register_name"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -188,7 +179,7 @@
         app:layout_constraintVertical_bias="0.808">
 
         <View
-            android:id="@+id/view"
+            android:id="@+id/view1"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="32dp"
