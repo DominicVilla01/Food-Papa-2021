@@ -5,8 +5,7 @@
     android:id="@+id/resturant_obj"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:background="@drawable/restaurant_background"
+    android:layout_marginBottom="5dp"
     android:clickable="true">
 
     <ImageView
@@ -42,9 +41,11 @@
         android:id="@+id/delivery_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:drawableStart="@drawable/time"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="196dp"
+        android:layout_marginRight="196dp"
+        android:layout_marginBottom="28dp"
         android:drawablePadding="3dp"
         android:gravity="center"
         android:text="34mins • 1.4km"
@@ -52,16 +53,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ratings"
-        app:layout_constraintTop_toBottomOf="@+id/res_cat"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/res_img"
+        app:layout_constraintTop_toBottomOf="@+id/res_cat" />
 
     <TextView
         android:id="@+id/ratings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="28dp"
         android:drawableStart="@drawable/star_rating"
         android:drawablePadding="3dp"
         android:gravity="center|center_horizontal"
@@ -69,8 +70,8 @@
         android:textSize="12dp"
         app:autoSizeTextType="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/res_img"
-        app:layout_constraintTop_toBottomOf="@+id/res_cat"
+        app:layout_constraintStart_toEndOf="@+id/delivery_time"
+        app:layout_constraintTop_toTopOf="@+id/delivery_time"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -99,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/res_img"
-        app:layout_constraintTop_toBottomOf="@+id/ratings"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_time"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
