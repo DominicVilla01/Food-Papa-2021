@@ -20,6 +20,8 @@
             android:name=".OrderSuccess_"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
+        <activity android:name=".CategoryPage_"></activity>
+        <activity android:name=".OrderSuccess_" />
         <activity android:name=".Cart_" />
         <activity android:name=".FoodDetail_" />
         <activity android:name=".RestaurantPage_" />

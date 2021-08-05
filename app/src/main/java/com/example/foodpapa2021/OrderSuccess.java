@@ -32,6 +32,6 @@ public class OrderSuccess extends AppCompatActivity {
     public void order_success_logout()
     {
 //        If cart is open close it
-        
+
     }
 }
