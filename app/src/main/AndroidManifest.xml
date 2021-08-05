@@ -1,51 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.foodpapa2021">
+<<<<<<< Original<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.example.foodpapa2021">
 
-    <supports-screens
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:smallScreens="true"
-        android:xlargeScreens="true" />
+<supports-screens
+    android:largeScreens="true"
+    android:normalScreens="true"
+    android:smallScreens="true"
+    android:xlargeScreens="true" />
 
-    <application
-        android:name=".realm.MyApp"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.FoodPapa2021">
-        <activity
-            android:name=".OrderSuccess_"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
-        <activity android:name=".CategoryPage_"></activity>
-        <activity android:name=".OrderSuccess_" />
-        <activity android:name=".Cart_" />
-        <activity android:name=".FoodDetail_" />
-        <activity android:name=".RestaurantPage_" />
-        <activity android:name=".OrderPage_" />
-        <activity
-            android:name=".SignUp_"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".user_settings.EditUser_" />
-        <activity
-            android:name=".LoginPage_"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".GetStarted_"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<application
+    android:name=".realm.MyApp"
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.FoodPapa2021">
+    <activity
+        android:name=".OrderSuccess_"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+    <activity android:name=".CategoryPage_"></activity>
+    <activity android:name=".OrderSuccess_" />
+    <activity android:name=".Cart_" />
+    <activity android:name=".FoodDetail_" />
+    <activity android:name=".RestaurantPage_" />
+    <activity android:name=".OrderPage_" />
+    <activity
+        android:name=".SignUp_"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    <activity android:name=".user_settings.EditUser_" />
+    <activity
+        android:name=".LoginPage_"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    <activity
+        android:name=".GetStarted_"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-    </application>
+    <meta-data
+        android:name="preloaded_fonts"
+        android:resource="@array/preloaded_fonts" />
+</application>
 
-</manifest>
+</manifest>=======
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<application>
+    <activity android:name="com.example.foodpapa2021.ProcessingPage"></activity>
+</application>
+</manifest>>>>>>>> Added
