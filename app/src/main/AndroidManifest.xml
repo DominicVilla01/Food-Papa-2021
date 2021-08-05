@@ -16,7 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodPapa2021">
-        <activity android:name=".OrderSuccess_"></activity>
+        <activity
+            android:name=".OrderSuccess_"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
         <activity android:name=".Cart_" />
         <activity android:name=".FoodDetail_" />
         <activity android:name=".RestaurantPage_" />
