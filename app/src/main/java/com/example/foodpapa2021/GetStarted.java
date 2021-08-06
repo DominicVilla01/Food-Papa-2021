@@ -19,7 +19,7 @@ public class GetStarted extends AppCompatActivity {
     @Click
     public void getStarted()
     {
-        LoginPage_.intent(this).start();
+        FoodDetail_.intent(this).start();
     }
 
     @AfterViews
