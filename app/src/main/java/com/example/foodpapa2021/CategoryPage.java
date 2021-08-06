@@ -21,7 +21,7 @@ public class CategoryPage extends AppCompatActivity {
     ImageView cat_page_img;
 
     @ViewById
-    TextView textView49;
+    TextView cat_page_title;
 
 
 //    Manage data
@@ -42,17 +42,17 @@ public class CategoryPage extends AppCompatActivity {
     {
         if(click_option.equals("fastfood"))
         {
-            textView49.setText("Category: Fast Food");
+            cat_page_title.setText("Category: Fast Food");
             cat_page_img.setImageResource(R.drawable.fast_food);
         }
         else if(click_option.equals("milktea"))
         {
-            textView49.setText("Category: Milk Tea");
+            cat_page_title.setText("Category: Milk Tea");
             cat_page_img.setImageResource(R.drawable.milktea);
         }
         else if(click_option.equals("fastcasual"))
         {
-            textView49.setText("Category: Fast-Casual");
+            cat_page_title.setText("Category: Fast-Casual");
             cat_page_img.setImageResource(R.drawable.fast_casual);
         }
     }

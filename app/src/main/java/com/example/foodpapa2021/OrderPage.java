@@ -1,7 +1,6 @@
 package com.example.foodpapa2021;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -19,21 +18,24 @@ public class OrderPage extends AppCompatActivity {
 //    Set vars
     SharedPreferences prefs;
 
-<<<<<<< HEAD
-
 //    Set Views
     @ViewById
-    ConstraintLayout cat_fastfood;
+    ImageView account_settings;
 
     @ViewById
-    ConstraintLayout cat_milktea;
+    ImageView home_settings;
 
     @ViewById
-    ConstraintLayout cat_fast_casual;
+    ImageView cat_fastfood;
+
+    @ViewById
+    ImageView cat_milktea;
+
+    @ViewById
+    ImageView cat_fast_casual;
 
     @Click
-    public void cat_fastfood()
-    {
+    public void cat_fastfood() {
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString("OrderClick", "fastfood");
         edit.apply();
@@ -42,8 +44,7 @@ public class OrderPage extends AppCompatActivity {
     }
 
     @Click
-    public void cat_milktea()
-    {
+    public void cat_milktea() {
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString("OrderClick", "milktea");
         edit.apply();
@@ -52,28 +53,13 @@ public class OrderPage extends AppCompatActivity {
     }
 
     @Click
-    public void cat_fast_casual()
-    {
+    public void cat_fast_casual() {
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString("OrderClick", "fastcasual");
         edit.apply();
 
         CategoryPage_.intent(this).start();
     }
-
-
-//    Initialize Shared Preferences
-    @AfterViews
-    public void init()
-    {
-        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-    }
-=======
-    @ViewById
-    ImageView account_settings;
-
-    @ViewById
-    ImageView home_settings;
 
     @Click
     public void account_settings(){
@@ -86,5 +72,9 @@ public class OrderPage extends AppCompatActivity {
     }
 
 
->>>>>>> 85b9f2379330b6eefd337e391d965e6e14287581
+//    Initialize preference
+    @AfterViews
+    public void init() {
+        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+    }
 }
