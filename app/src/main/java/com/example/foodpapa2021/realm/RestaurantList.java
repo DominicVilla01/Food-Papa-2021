@@ -28,5 +28,14 @@ public class RestaurantList extends RealmObject {
 
     public String getRes_time_distance() {return res_time_distance;}
     public void setRes_time_distance(String res_time_distance) {this.res_time_distance = res_time_distance;}
-
+    
+    @Override
+    public String toString() {
+        return "User{" +
+                "uuid='" + uuid + '\'' +
+                ", res_name='" + res_name + '\'' +
+                ", res_rating='" + res_rating + '\'' +
+                ", res_time_distance='" + res_time_distance + '\'' +
+                '}';
+    }
 }
