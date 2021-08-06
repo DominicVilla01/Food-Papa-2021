@@ -24,6 +24,9 @@ public class OrderPage extends AppCompatActivity {
 
 //    Set Views
     @ViewById
+    AutoCompleteTextView order_page_location;
+
+    @ViewById
     ImageView account_settings;
 
     @ViewById
@@ -76,21 +79,13 @@ public class OrderPage extends AppCompatActivity {
     }
 
 
-<<<<<<< HEAD
 //    Initialize preference
     @AfterViews
     public void init() {
         prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-=======
-    @ViewById
-    AutoCompleteTextView order_page_location;
-
-    @AfterViews
-    public void init(){
         String[] locations = getResources().getStringArray(R.array.locations);
         @SuppressLint("ResourceType") ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,locations);
         order_page_location.setAdapter(adapter);
 
->>>>>>> 899d4d80c9e58958bed611fa48c8d0ea92733970
     }
 }
