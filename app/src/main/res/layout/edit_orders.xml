@@ -7,7 +7,7 @@
     android:background="#FFFFFF">
 
     <ImageView
-        android:id="@+id/food_img_img"
+        android:id="@+id/cart_img"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginStart="15dp"
@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/fast_food" />
 
     <TextView
-        android:id="@+id/food_obj_name"
+        android:id="@+id/cart_food_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -30,11 +30,11 @@
         android:text="Food Name"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/food_img_img"
+        app:layout_constraintStart_toEndOf="@+id/cart_img"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/food_obj_price"
+        android:id="@+id/cart_food_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -43,9 +43,10 @@
         android:fontFamily="sans-serif-medium"
         android:text="149.60"
         android:textColor="@color/black"
+        android:textSize="14dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/food_img_img"
-        app:layout_constraintTop_toBottomOf="@+id/food_obj_name" />
+        app:layout_constraintStart_toEndOf="@+id/cart_img"
+        app:layout_constraintTop_toBottomOf="@+id/cart_food_name" />
 
     <View
         android:id="@+id/view10"
@@ -59,4 +60,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Edit detail"
+        android:textColor="#0096FF"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/cart_img"
+        app:layout_constraintTop_toBottomOf="@+id/cart_food_price" />
 </androidx.constraintlayout.widget.ConstraintLayout>
