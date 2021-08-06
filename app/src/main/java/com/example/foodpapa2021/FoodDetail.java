@@ -62,6 +62,7 @@ public class FoodDetail extends AppCompatActivity {
     @Click
     public void food_detail_updateBasket(){
         food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo2);
     }
 
 }

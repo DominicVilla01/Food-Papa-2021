@@ -240,7 +240,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView14">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cat_fast_casual"
+                        android:id="@+id/constraintLayout9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/category_background3"
@@ -251,7 +251,7 @@
                         app:layout_constraintVertical_bias="0.0">
 
                         <ImageView
-                            android:id="@+id/cat_img3"
+                            android:id="@+id/cat_fast_casual"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_marginStart="15dp"
@@ -279,12 +279,12 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/cat_img3"
+                            app:layout_constraintTop_toBottomOf="@+id/cat_fast_casual"
                             app:layout_constraintVertical_bias="0.0" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cat_fastfood"
+                        android:id="@+id/constraintLayout7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/category_background"
@@ -293,7 +293,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
-                            android:id="@+id/cat_img"
+                            android:id="@+id/cat_fastfood"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_marginStart="15dp"
@@ -323,11 +323,10 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/cat_img" />
+                            app:layout_constraintTop_toBottomOf="@+id/cat_fastfood" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/cat_milktea"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="51dp"
@@ -337,13 +336,13 @@
                         android:background="@drawable/category_background2"
                         android:clickable="true"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/cat_fast_casual"
-                        app:layout_constraintStart_toEndOf="@+id/cat_fastfood"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout9"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout7"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
 
                         <ImageView
-                            android:id="@+id/cat_img2"
+                            android:id="@+id/cat_milktea"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_marginStart="15dp"
@@ -371,7 +370,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/cat_img2"
+                            app:layout_constraintTop_toBottomOf="@+id/cat_milktea"
                             app:layout_constraintVertical_bias="0.0" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -405,17 +404,16 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/account_settings"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/account_settings"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:clickable="false"
+                        android:clickable="true"
                         app:srcCompat="@drawable/account_settings"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -430,14 +428,13 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/home_settings"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView90"
+                        android:id="@+id/home_settings"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:clickable="false"

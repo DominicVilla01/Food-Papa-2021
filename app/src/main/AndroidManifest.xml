@@ -27,7 +27,9 @@
         <activity
             android:name=".SignUp_"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".user_settings.EditUser_" />
+        <activity
+            android:name=".user_settings.EditUser_"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".LoginPage_"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
