@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".CategoryPage">
 
     <View
@@ -15,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView49" />
+        app:layout_constraintTop_toBottomOf="@+id/cat_page_title" />
 
     <ImageView
         android:id="@+id/cat_page_img"
@@ -27,20 +28,21 @@
         app:srcCompat="@drawable/fast_food" />
 
     <TextView
-        android:id="@+id/textView49"
+        android:id="@+id/cat_page_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Fast Food"
+        android:text="Category: Fast Food"
         android:textColor="@color/black"
         android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cat_page_img" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cat_page_restaurantList"
         android:layout_width="0dp"
         android:layout_height="430dp"
         android:layout_marginStart="35dp"

@@ -122,7 +122,7 @@ public class LoginPage extends AppCompatActivity {
                 edit.apply();
 
                 //Order Page
-                FoodDetail_.intent(this).start();
+                OrderPage_.intent(this).start();
             }
             else
             {
