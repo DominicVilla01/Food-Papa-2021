@@ -56,4 +56,12 @@ public class OrderPage extends AppCompatActivity {
 
         CategoryPage_.intent(this).start();
     }
+
+
+//    Initialize Shared Preferences
+    @AfterViews
+    public void init()
+    {
+        prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+    }
 }
