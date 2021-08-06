@@ -91,32 +91,43 @@ public class FoodDetail extends AppCompatActivity {
         food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tigersugar_black);
         food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tigersugar_sugar);
 
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_black);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_classic);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_pearl);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_sugar);
 
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_gongcha_black);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_gongcha_classic);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_gongcha_pearl);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_gongcha_sugar);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_macao_classic);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_macao_pearl);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_macao_sugar);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_serenitea_classic);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_serenitea_pearl);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_serenitea_sugar);
 
         // casual
 
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_italiannis_salad);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_itallianis_pasta);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_itallianis_ribs);
 
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_icedtea);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_outback_pasta);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_outback_ribs);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_outback_salad);
 
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
-        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_racks_pasta);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_racks_ribs);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_racks_salad);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tgif_icedtea);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tgif_pasta);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tgif_ribs);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tgif_salad);
     }
 
 }
