@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Food Papa 2021</string>
+    <string-array name="locations">
+        <item>Outside NCR</item>
+        <item>Within NCR</item>
+    </string-array>
 </resources>
