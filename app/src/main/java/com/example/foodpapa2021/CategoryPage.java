@@ -50,7 +50,7 @@ public class CategoryPage extends AppCompatActivity {
             textView49.setText("Category: Milk Tea");
             cat_page_img.setImageResource(R.drawable.milktea);
         }
-        else
+        else if(click_option.equals("fastcasual"))
         {
             textView49.setText("Category: Fast-Casual");
             cat_page_img.setImageResource(R.drawable.fast_casual);
