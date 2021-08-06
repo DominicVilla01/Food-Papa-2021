@@ -61,6 +61,61 @@ public class FoodDetail extends AppCompatActivity {
 
     @Click
     public void food_detail_updateBasket(){
+
+        // fast food
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_chicken);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_chicwdrink);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_fries);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_sundae);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_kfc_chicken);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_kfc_chicwdrink);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_kfc_fries);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_kfc_sundae);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_mcdo_chicken);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_mcdo_chicwdrink);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_mcdo_fries);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_mcdo_sundae);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_popeyes_chicken);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_popeyes_fries);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_popeyes_sundae);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_wendys_chicwdrink);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_wendys_fries);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_wendys_sundae);
+
+        // milk tea
+
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tigersugar_black);
+        food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tigersugar_sugar);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+
+        // casual
+
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
+        food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
         food_detail_foodimg.setImageResource(R.drawable.foodpapa_logo1);
     }
 
