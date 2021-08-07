@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.example.foodpapa2021.adapters.FastFoodMenu;
 import com.example.foodpapa2021.realm.CategoryList;
+import com.example.foodpapa2021.realm.FoodList_m;
 import com.example.foodpapa2021.realm.RestaurantList;
 import com.example.foodpapa2021.realm.FoodList_ff;
 
@@ -300,6 +301,30 @@ public class GetStarted extends AppCompatActivity {
 
             // MilkteaMenu
 
+            FoodList_m classicwp = new FoodList_m();
+            classicwp.setUuid(UUID.randomUUID().toString());
+            classicwp.setM_name("Classic with Pearls");
+            classicwp.setM_price(120.00);
+            classicwp.setM_quantity(0);
+
+            FoodList_m classic = new FoodList_m();
+            classic.setUuid(UUID.randomUUID().toString());
+            classic.setM_name("Classic");
+            classic.setM_price(110.00);
+            classic.setM_quantity(0);
+
+            FoodList_m brownSugar = new FoodList_m();
+            brownSugar.setUuid(UUID.randomUUID().toString());
+            brownSugar.setM_name("Brown Sugar Milktea");
+            brownSugar.setM_price(135.00);
+            brownSugar.setM_quantity(0);
+
+            FoodList_m blackit = new FoodList_m();
+            blackit.setUuid(UUID.randomUUID().toString());
+            blackit.setM_name("Black Iced Tea");
+            blackit.setM_price(95.00);
+            blackit.setM_quantity(0);
+
             // FastCasual Menu
 
             realm.beginTransaction();
@@ -333,6 +358,10 @@ public class GetStarted extends AppCompatActivity {
             realm.copyToRealmOrUpdate(claw2);
             realm.copyToRealmOrUpdate(ital2);
             realm.copyToRealmOrUpdate(racks2);
+            realm.copyToRealmOrUpdate(classicwp);
+            realm.copyToRealmOrUpdate(classic);
+            realm.copyToRealmOrUpdate(brownSugar);
+            realm.copyToRealmOrUpdate(blackit);
 
             realm.commitTransaction();
 
