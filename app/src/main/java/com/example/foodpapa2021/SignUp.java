@@ -104,6 +104,22 @@ public class SignUp extends AppCompatActivity {
         }
     }
 
+    //Other login options
+    @Click
+    public void facebook(){
+        Toast.makeText(this, "Unavailable in FoodPapa beta", Toast.LENGTH_SHORT).show();
+    }
+
+    @Click
+    public void google(){
+        Toast.makeText(this, "Unavailable in FoodPapa beta", Toast.LENGTH_SHORT).show();
+    }
+
+    @Click
+    public void twitter(){
+        Toast.makeText(this, "Unavailable in FoodPapa beta", Toast.LENGTH_SHORT).show();
+    }
+
     public void onDestroy()
     {
         super.onDestroy();

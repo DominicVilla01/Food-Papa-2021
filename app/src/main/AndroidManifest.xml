@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.foodpapa2021">
 
     <supports-screens
@@ -17,14 +16,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodPapa2021">
+        <activity android:name=".CategoryPage_" />
         <activity
             android:name=".OrderSuccess_"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".CategoryPage_"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Cart_" />
         <activity android:name=".FoodDetail_" />
         <activity android:name=".RestaurantPage_" />
         <activity android:name=".OrderPage_" />
+        <activity android:name=".ProcessingPage_"/>
         <activity
             android:name=".SignUp_"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -48,4 +48,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
 </manifest>

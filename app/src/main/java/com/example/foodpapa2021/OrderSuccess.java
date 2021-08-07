@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -24,14 +25,14 @@ public class OrderSuccess extends AppCompatActivity {
 //    Function for reorder
     public void order_success_reorder()
     {
-        FoodDetail_.intent(this).start();
+        OrderPage_.intent(this).start();
     }
 
 
 //    Function for logout
-    public void order_success_logout()
-    {
-//        If cart is open close it
-
-    }
+//    @Click
+//    public void order_success_logout()
+//    {
+//
+//    }
 }

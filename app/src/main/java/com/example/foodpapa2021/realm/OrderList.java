@@ -10,15 +10,6 @@ public class OrderList extends RealmObject
     private String order_name;
     private int order_quantity;
 
-    public OrderList()
-    {
-    }
-
-    public OrderList(String uuid, String order_name, int order_quantity) {
-        this.uuid = uuid;
-        this.order_name = order_name;
-        this.order_quantity = order_quantity;
-    }
 
     public String getUuid() {
         return uuid;

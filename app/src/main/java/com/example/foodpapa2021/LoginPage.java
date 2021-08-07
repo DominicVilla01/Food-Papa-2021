@@ -93,6 +93,7 @@ public class LoginPage extends AppCompatActivity {
             pass_input.setText("");
         }
     }
+
     @Click
     public void signin_apply()
     {
@@ -138,5 +139,30 @@ public class LoginPage extends AppCompatActivity {
     public void register()
     {
         SignUp_.intent(this).start();
+    }
+
+    //Other login options
+    @Click
+    public void facebook(){
+        Toast.makeText(this, "Unavailable in FoodPapa beta", Toast.LENGTH_SHORT).show();
+    }
+
+    @Click
+    public void google(){
+        Toast.makeText(this, "Unavailable in FoodPapa beta", Toast.LENGTH_SHORT).show();
+    }
+
+    @Click
+    public void twitter(){
+        Toast.makeText(this, "Unavailable in FoodPapa beta", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onDestroy()
+    {
+        super.onDestroy();
+        if(!realm.isClosed())
+        {
+            realm.close();
+        }
     }
 }
