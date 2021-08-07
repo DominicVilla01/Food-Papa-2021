@@ -118,21 +118,21 @@ public class OrderAdapter extends RealmRecyclerViewAdapter<OrderList, OrderAdapt
         } else if (order.getOrder_name().equals("Spaghetti")) {
             holder.img.setImageResource(R.drawable.foodlist_img_outback_pasta);
         }
+//
+//        holder.minus.setTag(order);
+//        holder.minus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                activity.minus((OrderList) v.getTag());
+//            }
+//        });
 
-        holder.minus.setTag(order);
-        holder.minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                activity.minus((OrderList) v.getTag());
-            }
-        });
-
-        holder.add.setTag(order);
-        holder.add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                activity.add((OrderList) v.getTag());
-            }
-        });
+//        holder.add.setTag(order);
+//        holder.add.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                activity.add((OrderList) v.getTag());
+//            }
+//        });
     }
 }

@@ -207,14 +207,32 @@ public class RestaurantPage extends AppCompatActivity {
             realm.close();
         }
     }
+    public void ffObj(FoodList_ff ff)
+    {
+        prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putString("food_name", ff.getFf_name());
+        edit.apply();
+
+        FoodDetail_.intent(this).start();
+    }
+    public void mObj(FoodList_m m)
+    {
+        prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putString("food_name", m.getM_name());
+        edit.apply();
+
+        FoodDetail_.intent(this).start();
+    }
     public void fcObj(FoodList_fc fc)
     {
         prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor edit = prefs.edit();
-        edit.putString("food_name", );
+        edit.putString("food_name", fc.getFc_name());
         edit.apply();
 
-        RestaurantPage_.intent(this).start();
+        FoodDetail_.intent(this).start();
     }
 
 }
