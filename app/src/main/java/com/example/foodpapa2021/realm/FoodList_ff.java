@@ -9,8 +9,8 @@ public class FoodList_ff extends RealmObject
     private String uuid;
 
     private String ff_name;
-    private String ff_price;
-    private String ff_quantity;
+    private double ff_price;
+    private int ff_quantity;
 
     public String getUuid() {
         return uuid;
@@ -28,19 +28,19 @@ public class FoodList_ff extends RealmObject
         this.ff_name = ff_name;
     }
 
-    public String getFf_price() {
+    public double getFf_price() {
         return ff_price;
     }
 
-    public void setFf_price(String ff_price) {
+    public void setFf_price(double ff_price) {
         this.ff_price = ff_price;
     }
 
-    public String getFf_quantity() {
+    public int getFf_quantity() {
         return ff_quantity;
     }
 
-    public void setFf_quantity(String ff_quantity) {
+    public void setFf_quantity(int ff_quantity) {
         this.ff_quantity = ff_quantity;
     }
 
@@ -49,8 +49,8 @@ public class FoodList_ff extends RealmObject
         return "FoodList_ff{" +
                 "uuid='" + uuid + '\'' +
                 ", ff_name='" + ff_name + '\'' +
-                ", ff_price='" + ff_price + '\'' +
-                ", ff_quantity='" + ff_quantity + '\'' +
+                ", ff_price=" + ff_price +
+                ", ff_quantity=" + ff_quantity +
                 '}';
     }
 }

@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.foodpapa2021.adapters.FastFoodMenu;
 import com.example.foodpapa2021.realm.CategoryList;
 import com.example.foodpapa2021.realm.RestaurantList;
 import com.example.foodpapa2021.realm.FoodList_ff;
@@ -259,6 +260,47 @@ public class GetStarted extends AppCompatActivity {
             racks2.setCat_rating("4.7");
             racks2.setCat_time_distance("36mins • 1.5km");
             racks2.setCat_cat("Fast-Casual");
+
+
+
+
+            //FastFoodMenu
+            FoodList_ff chicken = new FoodList_ff();
+            chicken.setUuid(UUID.randomUUID().toString());
+            chicken.setFf_name("1-pc. Fried Chicken");
+            chicken.setFf_price(84.00);
+            chicken.setFf_quantity(0);
+
+            FoodList_ff chickenwr = new FoodList_ff();
+            chickenwr.setUuid(UUID.randomUUID().toString());
+            chickenwr.setFf_name("1-pc. Fried Chicken w/ Rice and Drink");
+            chickenwr.setFf_price(84.00);
+            chickenwr.setFf_quantity(0);
+
+            FoodList_ff rFries = new FoodList_ff();
+            rFries.setUuid(UUID.randomUUID().toString());
+            rFries.setFf_name("Regular-sized Fries");
+            rFries.setFf_price(84.00);
+            rFries.setFf_quantity(0);
+
+            FoodList_ff mFries = new FoodList_ff();
+            mFries.setUuid(UUID.randomUUID().toString());
+            mFries.setFf_name("Medium-sized Fries");
+            mFries.setFf_price(84.00);
+            mFries.setFf_quantity(0);
+
+            FoodList_ff lFries = new FoodList_ff();
+            lFries.setUuid(UUID.randomUUID().toString());
+            lFries.setFf_name("Large-sized Fries");
+            lFries.setFf_price(84.00);
+            lFries.setFf_quantity(0);
+
+            FoodList_ff vSundae = new FoodList_ff();
+            vSundae.setUuid(UUID.randomUUID().toString());
+            vSundae.setFf_name("Vanilla Sundae");
+            vSundae.setFf_price(84.00);
+            vSundae.setFf_quantity(0);
+
 
             realm.beginTransaction();
             realm.copyToRealmOrUpdate(jollibee);

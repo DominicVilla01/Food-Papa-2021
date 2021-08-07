@@ -59,7 +59,7 @@ public class MilkteaMenu extends RealmRecyclerViewAdapter<FoodList_m, MilkteaMen
         FoodList_m m = getItem(position);
 
         holder.name.setText(m.getM_name());
-        holder.price.setText(m.getM_price());
+        holder.price.setText(String.valueOf(m.getM_price()));
 
         if (m.getM_name().equals("CoCo Fresh Tea & Juice"))
         {

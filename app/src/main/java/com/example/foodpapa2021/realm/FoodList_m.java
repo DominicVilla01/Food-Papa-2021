@@ -10,8 +10,8 @@ public class FoodList_m extends RealmObject{
     private String uuid;
 
     private String m_name;
-    private String m_price;
-    private Integer m_quantity;
+    private double m_price;
+    private int m_quantity;
 
     public String getUuid() {
         return uuid;
@@ -29,19 +29,19 @@ public class FoodList_m extends RealmObject{
         this.m_name = m_name;
     }
 
-    public String getM_price() {
+    public double getM_price() {
         return m_price;
     }
 
-    public void setM_price(String m_price) {
+    public void setM_price(double m_price) {
         this.m_price = m_price;
     }
 
-    public Integer getM_quantity() {
+    public int getM_quantity() {
         return m_quantity;
     }
 
-    public void setM_quantity(Integer m_quantity) {
+    public void setM_quantity(int m_quantity) {
         this.m_quantity = m_quantity;
     }
 
@@ -50,7 +50,7 @@ public class FoodList_m extends RealmObject{
         return "FoodList_m{" +
                 "uuid='" + uuid + '\'' +
                 ", m_name='" + m_name + '\'' +
-                ", m_price='" + m_price + '\'' +
+                ", m_price=" + m_price +
                 ", m_quantity=" + m_quantity +
                 '}';
     }

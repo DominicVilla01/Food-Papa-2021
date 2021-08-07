@@ -59,7 +59,7 @@ public class FastFoodMenu extends RealmRecyclerViewAdapter<FoodList_ff, FastFood
         FoodList_ff ff = getItem(position);
 
         holder.name.setText(ff.getFf_name());
-        holder.price.setText(ff.getFf_price());
+        holder.price.setText(String.valueOf(ff.getFf_price()));
 
         if (ff.getFf_name().equals("1-pc. Fried Chicken"))
         {
