@@ -3,12 +3,18 @@ package com.example.foodpapa2021;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.foodpapa2021.realm.FoodList_fc;
+import com.example.foodpapa2021.realm.RestaurantList;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
