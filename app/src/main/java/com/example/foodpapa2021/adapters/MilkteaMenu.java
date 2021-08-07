@@ -61,25 +61,21 @@ public class MilkteaMenu extends RealmRecyclerViewAdapter<FoodList_m, MilkteaMen
         holder.name.setText(m.getM_name());
         holder.price.setText(String.valueOf(m.getM_price()));
 
-        if (m.getM_name().equals("CoCo Fresh Tea & Juice"))
+        if (m.getM_name().equals("Classic with Pearls"))
         {
-            holder.img.setImageResource(R.drawable.coco_logo);
+            holder.img.setImageResource(R.drawable.foodlist_img_coco_pearl);
         }
-        else if (m.getM_name().equals("Gongcha"))
+        else if (m.getM_name().equals("Classic"))
         {
-            holder.img.setImageResource(R.drawable.gongcha_logo);
+            holder.img.setImageResource(R.drawable.foodlist_img_coco_classic);
         }
-        else if (m.getM_name().equals("Macao Imperial Tea"))
+        else if (m.getM_name().equals("Brown Sugar Milk Tea"))
         {
-            holder.img.setImageResource(R.drawable.macao_logo);
+            holder.img.setImageResource(R.drawable.foodlist_img_coco_sugar);
         }
-        else if (m.getM_name().equals("Serenitea"))
+        else if (m.getM_name().equals("Black Iced Tea"))
         {
-            holder.img.setImageResource(R.drawable.serenitea_logo);
-        }
-        else if (m.getM_name().equals("Tiger Sugar"))
-        {
-            holder.img.setImageResource(R.drawable.tiger_logo);
+            holder.img.setImageResource(R.drawable.foodlist_img_coco_black);
         }
 
         holder.mObj.setTag(m);
