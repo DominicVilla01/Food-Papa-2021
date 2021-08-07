@@ -329,25 +329,25 @@ public class GetStarted extends AppCompatActivity {
             FoodList_fc bbbr = new FoodList_fc();
             bbbr.setUuid(UUID.randomUUID().toString());
             bbbr.setFc_name("Baby Back Ribs");
-            bbbr.getFc_price(925.00);
+            bbbr.setFc_price(925.00);
             bbbr.setFc_quantity(0);
 
             FoodList_fc salad = new FoodList_fc();
             salad.setUuid(UUID.randomUUID().toString());
             salad.setFc_name("Caesar Salad");
-            salad.getFc_price(395.00);
+            salad.setFc_price(395.00);
             salad.setFc_quantity(0);
 
             FoodList_fc icedTea = new FoodList_fc();
             icedTea.setUuid(UUID.randomUUID().toString());
             icedTea.setFc_name("Iced Tea");
-            icedTea.getFc_price(120.00);
+            icedTea.setFc_price(120.00);
             icedTea.setFc_quantity(0);
 
             FoodList_fc pasta = new FoodList_fc();
             pasta.setUuid(UUID.randomUUID().toString());
             pasta.setFc_name("Pasta");
-            pasta.getFc_price(405.00);
+            pasta.setFc_price(405.00);
             pasta.setFc_quantity(0);
 
 

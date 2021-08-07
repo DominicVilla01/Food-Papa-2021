@@ -22,9 +22,9 @@ import io.realm.OrderedRealmCollection;
 import io.realm.RealmRecyclerViewAdapter;
 
 public class MilkteaMenu extends RealmRecyclerViewAdapter<FoodList_m, MilkteaMenu.ViewHolder> {
-    FoodDetail activity;
+    RestaurantPage activity;
 
-    public MilkteaMenu(FoodDetail activity, @Nullable OrderedRealmCollection<FoodList_m> data, boolean autoUpdate) {
+    public MilkteaMenu(RestaurantPage activity, @Nullable OrderedRealmCollection<FoodList_m> data, boolean autoUpdate) {
         super(data, autoUpdate);
         this.activity = activity;
     }

@@ -22,9 +22,9 @@ import io.realm.OrderedRealmCollection;
 import io.realm.RealmRecyclerViewAdapter;
 
 public class FastFoodMenu extends RealmRecyclerViewAdapter<FoodList_ff, FastFoodMenu.ViewHolder> {
-    FoodDetail activity;
+    RestaurantPage activity;
 
-    public FastFoodMenu(FoodDetail activity, @Nullable OrderedRealmCollection<FoodList_ff> data, boolean autoUpdate) {
+    public FastFoodMenu(RestaurantPage activity, @Nullable OrderedRealmCollection<FoodList_ff> data, boolean autoUpdate) {
         super(data, autoUpdate);
         this.activity = activity;
     }

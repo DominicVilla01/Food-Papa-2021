@@ -12,8 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.foodpapa2021.CategoryPage;
 import com.example.foodpapa2021.FoodDetail;
 import com.example.foodpapa2021.R;
+import com.example.foodpapa2021.RestaurantPage;
 import com.example.foodpapa2021.realm.CategoryList;
 import com.example.foodpapa2021.realm.FoodList_fc;
+import com.example.foodpapa2021.realm.RestaurantList;
 
 import javax.annotation.Nullable;
 
@@ -21,9 +23,9 @@ import io.realm.OrderedRealmCollection;
 import io.realm.RealmRecyclerViewAdapter;
 
 public class FastCasualMenu extends RealmRecyclerViewAdapter<FoodList_fc, FastCasualMenu.ViewHolder> {
-    FoodDetail activity;
+    RestaurantPage activity;
 
-    public FastCasualMenu(FoodDetail activity, @Nullable OrderedRealmCollection<FoodList_fc> data, boolean autoUpdate){
+    public FastCasualMenu(RestaurantPage activity, @Nullable OrderedRealmCollection<FoodList_fc> data, boolean autoUpdate){
         super(data, autoUpdate);
         this.activity = activity;
     }

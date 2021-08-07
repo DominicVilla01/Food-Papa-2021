@@ -9,6 +9,12 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.foodpapa2021.adapters.CategoryAdapter;
+import com.example.foodpapa2021.adapters.FastFoodMenu;
+import com.example.foodpapa2021.adapters.MilkteaMenu;
+import com.example.foodpapa2021.realm.CategoryList;
+import com.example.foodpapa2021.realm.FoodList_ff;
+import com.example.foodpapa2021.realm.FoodList_m;
 import com.example.foodpapa2021.realm.RestaurantList;
 import com.example.foodpapa2021.realm.User;
 import com.example.foodpapa2021.adapters.FastCasualMenu;
@@ -164,22 +170,51 @@ public class RestaurantPage extends AppCompatActivity {
             res_page_dTime.setText(result.getRes_time_distance());
         }
 
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
-        mLayoutManager.setOrientation(RecyclerView.VERTICAL);
-        res_page_foodlist.setLayoutManager(mLayoutManager);
+        if(result.getRes_cat().equals("Fast Food"))
+        {
+            LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
+            mLayoutManager.setOrientation(RecyclerView.VERTICAL);
+            res_page_foodlist.setLayoutManager(mLayoutManager);
 
-        RealmResults<FoodList_fc> list = realm.where(FoodList_fc.class).findAll();
-        FastCasualMenu fcAdapter = new FastCasualMenu(this, list, true);
-        res_page_foodlist.setAdapter(fcAdapter);
+            RealmResults<FoodList_ff> list = realm.where(FoodList_ff.class).findAll();
+            FastFoodMenu foodAdapter = new FastFoodMenu(this,list,true);
+            res_page_foodlist.setAdapter(foodAdapter);
+        }
+        else if(result.getRes_cat().equals("Milk Tea")){
+            LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
+            mLayoutManager.setOrientation(RecyclerView.VERTICAL);
+            res_page_foodlist.setLayoutManager(mLayoutManager);
+
+            RealmResults<FoodList_m> list = realm.where(FoodList_m.class).findAll();
+            MilkteaMenu foodAdapter = new MilkteaMenu(this,list,true);
+            res_page_foodlist.setAdapter(foodAdapter);
+        }
+        else if(result.getRes_cat().equals("Fast-Casual")){
+            LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
+            mLayoutManager.setOrientation(RecyclerView.VERTICAL);
+            res_page_foodlist.setLayoutManager(mLayoutManager);
+
+            RealmResults<FoodList_fc> list = realm.where(FoodList_fc.class).findAll();
+            FastCasualMenu foodAdapter = new FastCasualMenu(this,list,true);
+            res_page_foodlist.setAdapter(foodAdapter);
+        }
     }
-
+    public void onDestroy()
+    {
+        super.onDestroy();
+        if(!realm.isClosed())
+        {
+            realm.close();
+        }
+    }
     public void fcObj(FoodList_fc fc)
     {
         prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor edit = prefs.edit();
-        edit.putString("fc_uuid", fc.getUuid());
+        edit.putString("food_name", );
         edit.apply();
 
-        FoodDetail_.intent(this).start();
+        RestaurantPage_.intent(this).start();
     }
+
 }
