@@ -71,19 +71,19 @@ public class FastFoodMenu extends RealmRecyclerViewAdapter<FoodList_ff, FastFood
         }
         else if (ff.getFf_name().equals("Regular-sized Fries"))
         {
-            holder.img.setImageResource(R.drawable.kfc_logo);
+            holder.img.setImageResource(R.drawable.foodlist_img_jollibee_fries);
         }
         else if (ff.getFf_name().equals("Medium-sized Fries"))
         {
-            holder.img.setImageResource(R.drawable.wendys_logo);
+            holder.img.setImageResource(R.drawable.foodlist_img_jollibee_fries);
         }
         else if (ff.getFf_name().equals("Large-sized Fries"))
         {
-            holder.img.setImageResource(R.drawable.popeyes_logo);
+            holder.img.setImageResource(R.drawable.foodlist_img_jollibee_fries);
         }
         else if (ff.getFf_name().equals("Vanilla Sundae"))
         {
-            holder.img.setImageResource(R.drawable.popeyes_logo);
+            holder.img.setImageResource(R.drawable.foodlist_img_jollibee_sundae);
         }
 
         holder.ffObj.setTag(ff);
