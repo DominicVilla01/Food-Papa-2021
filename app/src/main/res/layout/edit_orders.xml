@@ -28,7 +28,7 @@
             tools:ignore="VectorDrawableCompat" />
 
         <TextView
-            android:id="@+id/order_detail_quantity"
+            android:id="@+id/order_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -92,7 +92,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-medium"
-        android:text="149.60"
+        android:text="149"
         android:textColor="@color/black"
         android:textSize="14dp"
         android:textStyle="bold"

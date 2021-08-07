@@ -29,15 +29,8 @@ import io.realm.Realm;
 @EActivity(R.layout.activity_food_detail)
 public class FoodDetail extends AppCompatActivity {
     //variables
-    int quantity = 1;
     SharedPreferences prefs;
     Realm realm;
-
-    @ViewById
-    ImageView food_detail_add;
-
-    @ViewById
-    ImageView food_detail_subtract;
 
     @ViewById
     ImageView food_detail_foodimg;
@@ -49,20 +42,17 @@ public class FoodDetail extends AppCompatActivity {
     TextView food_detail_foodname;
 
     @ViewById
-    TextView food_detail_quantity;
-
-    @ViewById
     Button food_detail_updateBasket;
 
     @AfterViews
     public void init() {
-        food_detail_quantity.setText(String.valueOf(quantity));
         prefs = getSharedPreferences("prefs",MODE_PRIVATE);
         String name = prefs.getString("food_name", null);
-        String price = prefs.getString("food_price", null);
+        int price = prefs.getInt("food_price", 0);
+
 
         food_detail_foodname.setText(name);
-        food_detail_price.setText(price);
+        food_detail_price.setText(String.valueOf(price));
 
         if (name.equals("1-pc. Fried Chicken"))
         {
@@ -117,37 +107,29 @@ public class FoodDetail extends AppCompatActivity {
         }
 
     }
-
-    @Click
-    public void food_detail_add() {
-        quantity++;
-        food_detail_quantity.setText(String.valueOf(quantity));
-    }
-
-    @Click
-    public void food_detail_subtract() {
-        quantity--;
-        if (quantity > 0) {
-            food_detail_quantity.setText(String.valueOf(quantity));
-        } else if (quantity < 0) {
-            quantity = 0;
-            food_detail_quantity.setText(String.valueOf(quantity));
-        }
-    }
-
     @Click
     public void food_detail_updateBasket() {
+        prefs = getSharedPreferences("prefs",MODE_PRIVATE);
+        String name = prefs.getString("food_name", null);
+        int price = prefs.getInt("food_price", 0);
 
         realm = Realm.getDefaultInstance();
         OrderList newOrder = new OrderList();
         newOrder.setUuid(UUID.randomUUID().toString());
-        newOrder.setOrder_name(food_detail_foodname.getText().toString());
-        newOrder.setOrder_price(food_detail_price.getText().length());
-        newOrder.setOrder_quantity(food_detail_quantity.getText().length());
+        newOrder.setOrder_name(name);
+        newOrder.setOrder_price(price);
+        newOrder.setOrder_quantity(1);
 
         realm.beginTransaction();
         realm.copyToRealmOrUpdate(newOrder);
         realm.commitTransaction();
+
+        int total = prefs.getInt("total", 0);
+        total = total + price;
+
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putInt("total", total);
+        edit.apply();
 
         Toast.makeText(this,"Added a new order",Toast.LENGTH_SHORT).show();
         finish();

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
@@ -26,6 +27,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import io.realm.Realm;
+import io.realm.RealmObjectChangeListener;
 import io.realm.RealmResults;
 
 @EActivity(R.layout.activity_cart)
@@ -64,15 +66,26 @@ public class Cart extends AppCompatActivity {
 
         //Set location
         String location = prefs.getString("location", null);
+        int total = prefs.getInt("total", 0);
+        cart_page_item_total.setText("Php " + total);
         cart_page_location.setText(location);
 
         //Delivery fee
         if(location.equals("Outside NCR")){
-            cart_page_dFee.setText("Php 76.00");
+            cart_page_dFee.setText("Php 76");
+            cart_page_totalBill.setText("Php" + (total + 76));
+
+            SharedPreferences.Editor edit = prefs.edit();
+            edit.putInt("finalbill", total+76);
+            edit.apply();
 
         }
         else if(location.equals("Within NCR")){
-            cart_page_dFee.setText("Php 59.00");
+            cart_page_dFee.setText("Php 59");
+            cart_page_totalBill.setText("Php" + (total + 59));
+            SharedPreferences.Editor edit = prefs.edit();
+            edit.putInt("finalbill", total+59);
+            edit.apply();
         }
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         mLayoutManager.setOrientation(RecyclerView.VERTICAL);
@@ -118,15 +131,60 @@ public class Cart extends AppCompatActivity {
         });
         alert.create().show();
     }
+
     public void minus(OrderList order)
     {
+        int changes = prefs.getInt("total", 0);
         int current = order.getOrder_quantity();
-        order.setOrder_quantity(current-1);
+        int price = order.getOrder_price();
+
+        realm.beginTransaction();
+        if(current>1) {
+            order.setOrder_quantity(current - 1);
+            changes = changes - price;
+            SharedPreferences.Editor edit = prefs.edit();
+            edit.putInt("total", changes);
+            edit.apply();
+            Intent refresh = new Intent(this, Cart_.class);
+            startActivity(refresh);
+            finish();
+        }
+        else{
+            changes = changes - price;
+            SharedPreferences.Editor edit = prefs.edit();
+            edit.putInt("total", changes);
+            edit.apply();
+
+            realm = Realm.getDefaultInstance();
+            OrderList order_quantity = realm.where(OrderList.class).equalTo("order_quantity", current).findFirst();
+            order_quantity.deleteFromRealm();
+
+            Intent refresh = new Intent(this, Cart_.class);
+            startActivity(refresh);
+            finish();
+        }
+        realm.commitTransaction();
+
     }
     public void add(OrderList order)
     {
         int current = order.getOrder_quantity();
+        int price = order.getOrder_price();
+
+        realm.beginTransaction();
         order.setOrder_quantity(current+1);
+        realm.commitTransaction();
+
+        int changes = prefs.getInt("total", 0);
+        changes = changes + price;
+
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putInt("total", changes);
+        edit.apply();
+
+        Intent refresh = new Intent(this, Cart_.class);
+        startActivity(refresh);
+        finish();
     }
 
 

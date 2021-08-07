@@ -43,9 +43,14 @@ public class ProcessingPage extends AppCompatActivity
     @AfterViews
     public void init(){
         prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        int finalBill = prefs.getInt("finalbill", 0);
+        processing_total_bill.setText(String.valueOf(finalBill));
+
+
         boolean pmethod = prefs.getBoolean("paymentMethod", false);
         if(pmethod){
             processing_payment_method.setText("Card");
+
         }
         else
         {
@@ -56,12 +61,19 @@ public class ProcessingPage extends AppCompatActivity
     
     @Click
     public void processing_page_received(){
-//        RealmResults<OrderList> list = realm.where(OrderList.class).findAll();
-//        realm.beginTransaction();
-//        list.deleteAllFromRealm();
-//        realm.commitTransaction();
+        realm = Realm.getDefaultInstance();
+        RealmResults<OrderList> list = realm.where(OrderList.class).findAll();
 
-        OrderSuccess_.intent(this).start();
+        if(list!=null){
+            realm.beginTransaction();
+            list.deleteAllFromRealm();
+            realm.commitTransaction();
+
+            OrderSuccess_.intent(this).start();
+        }
+        else{
+            OrderSuccess_.intent(this).start();
+        }
     }
     public void onDestroy()
     {

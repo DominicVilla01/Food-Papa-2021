@@ -6,13 +6,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodpapa2021.Cart;
-import com.example.foodpapa2021.CategoryPage;
 import com.example.foodpapa2021.R;
-import com.example.foodpapa2021.realm.CategoryList;
 import com.example.foodpapa2021.realm.OrderList;
 
 import javax.annotation.Nullable;
@@ -45,7 +42,7 @@ public class OrderAdapter extends RealmRecyclerViewAdapter<OrderList, OrderAdapt
             img = orderView.findViewById(R.id.cart_img);
             minus = orderView.findViewById(R.id.order_detail_subtract);
             add = orderView.findViewById(R.id.order_detail_add);
-            quantity = orderView.findViewById(R.id.order_detail_quantity);
+            quantity = orderView.findViewById(R.id.order_quantity);
         }
     }
 
