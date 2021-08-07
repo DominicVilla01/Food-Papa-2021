@@ -11,9 +11,6 @@ import org.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.activity_order_success)
 public class OrderSuccess extends AppCompatActivity {
-//    Set Vars
-
-
 //    Get Views
     @ViewById
     Button order_success_logout;
@@ -23,16 +20,15 @@ public class OrderSuccess extends AppCompatActivity {
 
 
 //    Function for reorder
+    @Click
     public void order_success_reorder()
     {
         OrderPage_.intent(this).start();
     }
-
-
-//    Function for logout
-//    @Click
-//    public void order_success_logout()
-//    {
-//
-//    }
+    @Click
+    public void order_success_logout()
+    {
+        LoginPage_.intent(this).start();
+        finish();
+    }
 }

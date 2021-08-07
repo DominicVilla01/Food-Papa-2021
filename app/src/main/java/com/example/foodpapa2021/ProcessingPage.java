@@ -11,12 +11,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.foodpapa2021.realm.OrderList;
+
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 @EActivity(R.layout.activity_processing_page)
 public class ProcessingPage extends AppCompatActivity
@@ -53,7 +56,12 @@ public class ProcessingPage extends AppCompatActivity
     
     @Click
     public void processing_page_received(){
+//        RealmResults<OrderList> list = realm.where(OrderList.class).findAll();
+//        realm.beginTransaction();
+//        list.deleteAllFromRealm();
+//        realm.commitTransaction();
 
+        OrderSuccess_.intent(this).start();
     }
     public void onDestroy()
     {

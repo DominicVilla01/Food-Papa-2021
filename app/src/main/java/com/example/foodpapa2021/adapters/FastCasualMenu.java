@@ -69,7 +69,7 @@ public class FastCasualMenu extends RealmRecyclerViewAdapter<FoodList_fc, FastCa
             holder.img.setImageResource(R.drawable.foodlist_img_outback_salad);
         } else if (fc.getFc_name().equals("Iced Tea")) {
             holder.img.setImageResource(R.drawable.foodlist_img_icedtea);
-        } else if (fc.getFc_name().equals("Spaghetti")) {
+        } else if (fc.getFc_name().equals("Pasta")) {
             holder.img.setImageResource(R.drawable.foodlist_img_outback_pasta);
         }
 

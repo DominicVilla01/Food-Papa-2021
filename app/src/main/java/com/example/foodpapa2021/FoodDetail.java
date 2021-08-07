@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.foodpapa2021.realm.FoodList_fc;
+import com.example.foodpapa2021.realm.OrderList;
 import com.example.foodpapa2021.realm.RestaurantList;
 
 import org.androidannotations.annotations.AfterViews;
@@ -21,10 +22,16 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import java.util.UUID;
+
+import io.realm.Realm;
+
 @EActivity(R.layout.activity_food_detail)
 public class FoodDetail extends AppCompatActivity {
     //variables
     int quantity = 1;
+    SharedPreferences prefs;
+    Realm realm;
 
     @ViewById
     ImageView food_detail_add;
@@ -36,6 +43,12 @@ public class FoodDetail extends AppCompatActivity {
     ImageView food_detail_foodimg;
 
     @ViewById
+    TextView food_detail_price;
+
+    @ViewById
+    TextView food_detail_foodname;
+
+    @ViewById
     TextView food_detail_quantity;
 
     @ViewById
@@ -44,6 +57,65 @@ public class FoodDetail extends AppCompatActivity {
     @AfterViews
     public void init() {
         food_detail_quantity.setText(String.valueOf(quantity));
+        prefs = getSharedPreferences("prefs",MODE_PRIVATE);
+        String name = prefs.getString("food_name", null);
+        String price = prefs.getString("food_price", null);
+
+        food_detail_foodname.setText(name);
+        food_detail_price.setText(price);
+
+        if (name.equals("1-pc. Fried Chicken"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_chicken);
+        }
+        else if (name.equals("1-pc. Fried Chicken w/ Rice and Drink"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_chicwdrink);
+        }
+        else if (name.equals("Regular-sized Fries"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_fries);
+        }
+        else if (name.equals("Medium-sized Fries"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_fries);
+        }
+        else if (name.equals("Large-sized Fries"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_fries);
+        }
+        else if (name.equals("Vanilla Sundae"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_sundae);
+        }
+
+        else if (name.equals("Classic with Pearls"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_pearl);
+        }
+        else if (name.equals("Classic"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_classic);
+        }
+        else if (name.equals("Brown Sugar Milk Tea"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_sugar);
+        }
+        else if (name.equals("Black Iced Tea"))
+        {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_black);
+        }
+
+        else if (name.equals("Baby Back Ribs")) {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_outback_ribs);
+        } else if (name.equals("Caesar Salad")) {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_outback_salad);
+        } else if (name.equals("Iced Tea")) {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_icedtea);
+        } else if (name.equals("Spaghetti")) {
+            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_outback_pasta);
+        }
+
     }
 
     @Click
@@ -66,134 +138,18 @@ public class FoodDetail extends AppCompatActivity {
     @Click
     public void food_detail_updateBasket() {
 
-        // fast food
-//        if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_chicken);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_chicwdrink);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_fries);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_jollibee_sundae);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_kfc_chicken);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_kfc_chicwdrink);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_kfc_fries);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_kfc_sundae);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_mcdo_chicken);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_mcdo_chicwdrink);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_mcdo_fries);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_mcdo_sundae);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_popeyes_chicken);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_popeyes_fries);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_popeyes_sundae);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_wendys_chicwdrink);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_wendys_fries);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_wendys_sundae);
-//        }
-//
-//        // milk tea
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tigersugar_black);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tigersugar_sugar);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_black);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_classic);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_pearl);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_coco_sugar);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_gongcha_black);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_gongcha_classic);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_gongcha_pearl);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_gongcha_sugar);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_macao_classic);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_macao_pearl);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_macao_sugar);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_serenitea_classic);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_serenitea_pearl);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_serenitea_sugar);
-//        }
-//
-//        // casual
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_italiannis_salad);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_itallianis_pasta);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_itallianis_ribs);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_icedtea);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_outback_pasta);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_outback_ribs);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_outback_salad);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_racks_pasta);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_racks_ribs);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_racks_salad);
-//        }
-//
-//        else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tgif_icedtea);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tgif_pasta);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tgif_ribs);
-//        } else if () {
-//            food_detail_foodimg.setImageResource(R.drawable.foodlist_img_tgif_salad);
-//        }
+        realm = Realm.getDefaultInstance();
+        OrderList newOrder = new OrderList();
+        newOrder.setUuid(UUID.randomUUID().toString());
+        newOrder.setOrder_name(food_detail_foodname.getText().toString());
+        newOrder.setOrder_price(food_detail_price.getText().length());
+        newOrder.setOrder_quantity(food_detail_quantity.getText().length());
 
+        realm.beginTransaction();
+        realm.copyToRealmOrUpdate(newOrder);
+        realm.commitTransaction();
+
+        Toast.makeText(this,"Added a new order",Toast.LENGTH_SHORT).show();
+        finish();
     }
 }

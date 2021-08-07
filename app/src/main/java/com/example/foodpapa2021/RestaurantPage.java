@@ -212,6 +212,7 @@ public class RestaurantPage extends AppCompatActivity {
         prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString("food_name", ff.getFf_name());
+        edit.putString("food_price", String.valueOf(ff.getFf_price()));
         edit.apply();
 
         FoodDetail_.intent(this).start();
@@ -221,6 +222,7 @@ public class RestaurantPage extends AppCompatActivity {
         prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString("food_name", m.getM_name());
+        edit.putString("food_price", String.valueOf(m.getM_price()));
         edit.apply();
 
         FoodDetail_.intent(this).start();
@@ -230,6 +232,7 @@ public class RestaurantPage extends AppCompatActivity {
         prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString("food_name", fc.getFc_name());
+        edit.putString("food_price", String.valueOf(fc.getFc_price()));
         edit.apply();
 
         FoodDetail_.intent(this).start();

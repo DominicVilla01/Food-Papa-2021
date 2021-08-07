@@ -9,7 +9,7 @@ public class FoodList_ff extends RealmObject
     private String uuid;
 
     private String ff_name;
-    private double ff_price;
+    private int ff_price;
     private int ff_quantity;
 
     public String getUuid() {
@@ -28,11 +28,11 @@ public class FoodList_ff extends RealmObject
         this.ff_name = ff_name;
     }
 
-    public double getFf_price() {
+    public int getFf_price() {
         return ff_price;
     }
 
-    public void setFf_price(double ff_price) {
+    public void setFf_price(int ff_price) {
         this.ff_price = ff_price;
     }
 

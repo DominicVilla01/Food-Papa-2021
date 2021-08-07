@@ -267,87 +267,87 @@ public class GetStarted extends AppCompatActivity {
             FoodList_ff chicken = new FoodList_ff();
             chicken.setUuid(UUID.randomUUID().toString());
             chicken.setFf_name("1-pc. Fried Chicken");
-            chicken.setFf_price(84.00);
+            chicken.setFf_price(84);
             chicken.setFf_quantity(0);
 
             FoodList_ff chickenwr = new FoodList_ff();
             chickenwr.setUuid(UUID.randomUUID().toString());
             chickenwr.setFf_name("1-pc. Fried Chicken w/ Rice and Drink");
-            chickenwr.setFf_price(110.00);
+            chickenwr.setFf_price(110);
             chickenwr.setFf_quantity(0);
 
             FoodList_ff rFries = new FoodList_ff();
             rFries.setUuid(UUID.randomUUID().toString());
             rFries.setFf_name("Regular-sized Fries");
-            rFries.setFf_price(42.00);
+            rFries.setFf_price(42);
             rFries.setFf_quantity(0);
 
             FoodList_ff mFries = new FoodList_ff();
             mFries.setUuid(UUID.randomUUID().toString());
             mFries.setFf_name("Medium-sized Fries");
-            mFries.setFf_price(50.00);
+            mFries.setFf_price(50);
             mFries.setFf_quantity(0);
 
             FoodList_ff lFries = new FoodList_ff();
             lFries.setUuid(UUID.randomUUID().toString());
             lFries.setFf_name("Large-sized Fries");
-            lFries.setFf_price(60.00);
+            lFries.setFf_price(60);
             lFries.setFf_quantity(0);
 
             FoodList_ff vSundae = new FoodList_ff();
             vSundae.setUuid(UUID.randomUUID().toString());
             vSundae.setFf_name("Vanilla Sundae");
-            vSundae.setFf_price(30.00);
+            vSundae.setFf_price(30);
             vSundae.setFf_quantity(0);
 
             // MilkteaMenu
             FoodList_m classicwp = new FoodList_m();
             classicwp.setUuid(UUID.randomUUID().toString());
             classicwp.setM_name("Classic with Pearls");
-            classicwp.setM_price(120.00);
+            classicwp.setM_price(120);
             classicwp.setM_quantity(0);
 
             FoodList_m classic = new FoodList_m();
             classic.setUuid(UUID.randomUUID().toString());
             classic.setM_name("Classic");
-            classic.setM_price(110.00);
+            classic.setM_price(110);
             classic.setM_quantity(0);
 
             FoodList_m brownSugar = new FoodList_m();
             brownSugar.setUuid(UUID.randomUUID().toString());
-            brownSugar.setM_name("Brown Sugar Milktea");
-            brownSugar.setM_price(135.00);
+            brownSugar.setM_name("Brown Sugar Milk Tea");
+            brownSugar.setM_price(135);
             brownSugar.setM_quantity(0);
 
             FoodList_m blackit = new FoodList_m();
             blackit.setUuid(UUID.randomUUID().toString());
             blackit.setM_name("Black Iced Tea");
-            blackit.setM_price(95.00);
+            blackit.setM_price(95);
             blackit.setM_quantity(0);
 
             // FastCasualMenu
             FoodList_fc bbbr = new FoodList_fc();
             bbbr.setUuid(UUID.randomUUID().toString());
             bbbr.setFc_name("Baby Back Ribs");
-            bbbr.setFc_price(925.00);
+            bbbr.setFc_price(925);
             bbbr.setFc_quantity(0);
 
             FoodList_fc salad = new FoodList_fc();
             salad.setUuid(UUID.randomUUID().toString());
             salad.setFc_name("Caesar Salad");
-            salad.setFc_price(395.00);
+            salad.setFc_price(395);
             salad.setFc_quantity(0);
 
             FoodList_fc icedTea = new FoodList_fc();
             icedTea.setUuid(UUID.randomUUID().toString());
             icedTea.setFc_name("Iced Tea");
-            icedTea.setFc_price(120.00);
+            icedTea.setFc_price(120);
             icedTea.setFc_quantity(0);
 
             FoodList_fc pasta = new FoodList_fc();
             pasta.setUuid(UUID.randomUUID().toString());
             pasta.setFc_name("Pasta");
-            pasta.setFc_price(405.00);
+            pasta.setFc_price(405);
             pasta.setFc_quantity(0);
 
 

@@ -8,11 +8,8 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.foodpapa2021.FoodDetail;
 import com.example.foodpapa2021.R;
 import com.example.foodpapa2021.RestaurantPage;
-import com.example.foodpapa2021.realm.CategoryList;
-import com.example.foodpapa2021.realm.FoodList;
 import com.example.foodpapa2021.realm.FoodList_ff;
 
 import javax.annotation.Nonnull;
