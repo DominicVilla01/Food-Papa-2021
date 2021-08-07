@@ -47,9 +47,9 @@ public class FastCasualMenu extends RealmRecyclerViewAdapter<FoodList_fc, FastCa
     @NonNull
     @Override
     public FastCasualMenu.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
-        View v = activity.getLayoutInflater().inflate(R.layout.category_objects, parent,false);
+        View v = activity.getLayoutInflater().inflate(R.layout.food_objects, parent,false);
 
-        FastCasualMenu.ViewHolder vh = new FastCasualMenu.ViewHolder(v);
+        ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 

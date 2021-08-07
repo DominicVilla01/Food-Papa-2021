@@ -12,17 +12,6 @@ public class FoodList_ff extends RealmObject
     private String ff_price;
     private String ff_quantity;
 
-    public FoodList_ff()
-    {
-    }
-
-    public FoodList_ff(String uuid, String ff_name, String ff_price, String ff_quantity) {
-        this.uuid = uuid;
-        this.ff_name = ff_name;
-        this.ff_price = ff_price;
-        this.ff_quantity = ff_quantity;
-    }
-
     public String getUuid() {
         return uuid;
     }
