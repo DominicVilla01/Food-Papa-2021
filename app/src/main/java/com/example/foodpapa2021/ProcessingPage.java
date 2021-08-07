@@ -44,7 +44,7 @@ public class ProcessingPage extends AppCompatActivity
     public void init(){
         prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         int finalBill = prefs.getInt("finalbill", 0);
-        processing_total_bill.setText(String.valueOf(finalBill));
+        processing_total_bill.setText("Php "+ finalBill);
 
 
         boolean pmethod = prefs.getBoolean("paymentMethod", false);
