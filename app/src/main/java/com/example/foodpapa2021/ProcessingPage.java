@@ -53,7 +53,7 @@ public class ProcessingPage extends AppCompatActivity
     
     @Click
     public void processing_page_received(){
-
+        OrderPage_.intent(this).start();
     }
     public void onDestroy()
     {
