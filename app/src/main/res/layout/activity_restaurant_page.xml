@@ -30,15 +30,26 @@
         app:layout_constraintTop_toTopOf="@+id/res_page_img">
 
         <TextView
+            android:id="@+id/res_page_dTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="34mins • 1.4km"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@+id/res_page_rating"
+            app:layout_constraintTop_toBottomOf="@+id/res_page_name" />
+
+        <TextView
             android:id="@+id/res_page_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
             android:drawableStart="@drawable/star_rating"
             android:drawablePadding="3dp"
             android:gravity="center|center_horizontal"
-            android:text="4.6 | 34mins • 1.4km"
+            android:text="4.6"
             android:textSize="12dp"
             app:autoSizeTextType="none"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +60,6 @@
             android:layout_width="315dp"
             android:layout_height="0dp"
             android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-medium"
             android:text="Jollibee - UST Dapitan"

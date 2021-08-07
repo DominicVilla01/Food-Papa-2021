@@ -14,6 +14,7 @@ import com.example.foodpapa2021.adapters.RestaurantAdapter;
 import com.example.foodpapa2021.realm.RestaurantList;
 import com.example.foodpapa2021.realm.User;
 import com.example.foodpapa2021.user_settings.EditUser_;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.androidannotations.annotations.Click;
 import android.annotation.SuppressLint;
@@ -36,6 +37,9 @@ public class OrderPage extends AppCompatActivity {
 //    Set Views
     @ViewById
     AutoCompleteTextView order_page_location;
+
+    @ViewById
+    FloatingActionButton order_page_cart;
 
     @ViewById
     RecyclerView res_list;
@@ -88,6 +92,13 @@ public class OrderPage extends AppCompatActivity {
         res_list.setAdapter(resAdapter);
 
     }
+    @Click
+    public void order_page_cart(){
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putString("location", order_page_location.getText().toString());
+        edit.apply();
+        Cart_.intent(this).start();
+    }
 
     @Click
     public void cat_fastfood() {
@@ -138,7 +149,7 @@ public class OrderPage extends AppCompatActivity {
     {
         prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor edit = prefs.edit();
-        edit.putString("res_uuid", res.getUuid());
+        edit.putString("res_name", res.getRes_name());
         edit.apply();
 
         RestaurantPage_.intent(this).start();
