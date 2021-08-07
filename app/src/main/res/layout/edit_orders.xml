@@ -6,6 +6,59 @@
     android:layout_height="wrap_content"
     android:background="#FFFFFF">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cart_img">
+
+        <ImageButton
+            android:id="@+id/order_detail_subtract"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/signs_background"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/remove"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/order_detail_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="2dp"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/food_detail_add"
+            app:layout_constraintStart_toEndOf="@+id/order_detail_subtract"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/food_detail_add"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/signs_background"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/add"
+            tools:ignore="VectorDrawableCompat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <ImageView
         android:id="@+id/cart_img"
         android:layout_width="85dp"
@@ -61,16 +114,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="Edit detail"
-        android:textColor="#0096FF"
-        android:textSize="14dp"
-        app:layout_constraintStart_toEndOf="@+id/cart_img"
-        app:layout_constraintTop_toBottomOf="@+id/cart_food_price" />
 </androidx.constraintlayout.widget.ConstraintLayout>
