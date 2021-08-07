@@ -261,9 +261,6 @@ public class GetStarted extends AppCompatActivity {
             racks2.setCat_time_distance("36mins • 1.5km");
             racks2.setCat_cat("Fast-Casual");
 
-
-
-
             //FastFoodMenu
             FoodList_ff chicken = new FoodList_ff();
             chicken.setUuid(UUID.randomUUID().toString());
@@ -301,6 +298,9 @@ public class GetStarted extends AppCompatActivity {
             vSundae.setFf_price(84.00);
             vSundae.setFf_quantity(0);
 
+            // MilkteaMenu
+
+            // FastCasual Menu
 
             realm.beginTransaction();
             realm.copyToRealmOrUpdate(jollibee);
