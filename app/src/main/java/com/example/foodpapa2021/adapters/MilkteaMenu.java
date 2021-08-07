@@ -56,35 +56,35 @@ public class MilkteaMenu extends RealmRecyclerViewAdapter<FoodList_m, FastFoodMe
     public void onBindViewHolder(@Nonnull FastFoodMenu.ViewHolder holder, int position){
         FoodList_m cat = getItem(position);
 
-        holder.name.setText(ff.getFf_name());
-        holder.price.setText(ff.getFf_price());
+        holder.name.setText(m.getM_name());
+        holder.price.setText(m.getM_price());
 
-        if (ff.getFf_name().equals("Coco"))
+        if (m.getM_name().equals("CoCo Fresh Tea & Juice"))
         {
             holder.img.setImageResource(R.drawable.coco_logo);
         }
-        else if (ff.getFf_name().equals("Gongcha"))
+        else if (m.getM_name().equals("Gongcha"))
         {
             holder.img.setImageResource(R.drawable.gongcha_logo);
         }
-        else if (ff.getFf_name().equals("Macao Imperial"))
+        else if (m.getM_name().equals("Macao Imperial Tea"))
         {
             holder.img.setImageResource(R.drawable.macao_logo);
         }
-        else if (ff.getFf_name().equals("Serenitea"))
+        else if (m.getM_name().equals("Serenitea"))
         {
             holder.img.setImageResource(R.drawable.serenitea_logo);
         }
-        else if (ff.getFf_name().equals("Tiger Sugar"))
+        else if (m.getM_name().equals("Tiger Sugar"))
         {
             holder.img.setImageResource(R.drawable.tigersugar_logo);
         }
 
-        holder.ffobj.setTag(ff);
-        holder.ffobj.setOnClickListener(new View.OnClickListener(){
+        holder.mobj.setTag(m);
+        holder.mobj.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                activity.ffObj((FoodList_m) v.getTag());
+                activity.mObj((FoodList_m) v.getTag());
             }
         });
     }
