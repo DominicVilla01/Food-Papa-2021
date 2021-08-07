@@ -65,7 +65,7 @@ public class OrderPage extends AppCompatActivity {
         realm = Realm.getDefaultInstance();
 
         //Call SharedPreferences
-        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
 
         String[] locations = getResources().getStringArray(R.array.locations);
         @SuppressLint("ResourceType") ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,locations);
@@ -91,27 +91,27 @@ public class OrderPage extends AppCompatActivity {
 
     @Click
     public void cat_fastfood() {
-        SharedPreferences.Editor edits = prefs.edit();
-        edits.putString("OrderClick", "Fast Food");
-        edits.apply();
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putString("OrderClick", "Fast Food");
+        edit.apply();
 
         CategoryPage_.intent(this).start();
     }
 
     @Click
     public void cat_milktea() {
-        SharedPreferences.Editor edits = prefs.edit();
-        edits.putString("OrderClick", "Milk Tea");
-        edits.apply();
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putString("OrderClick", "Milk Tea");
+        edit.apply();
 
         CategoryPage_.intent(this).start();
     }
 
     @Click
     public void cat_fast_casual() {
-        SharedPreferences.Editor edits = prefs.edit();
-        edits.putString("OrderClick", "Fast-Casual");
-        edits.apply();
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putString("OrderClick", "Fast-Casual");
+        edit.apply();
 
         CategoryPage_.intent(this).start();
     }
@@ -136,7 +136,7 @@ public class OrderPage extends AppCompatActivity {
     }
     public void resObj(RestaurantList res)
     {
-        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString("res_uuid", res.getUuid());
         edit.apply();

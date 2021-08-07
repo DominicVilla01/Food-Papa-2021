@@ -10,7 +10,7 @@
     android:clickable="true">
 
     <ImageView
-        android:id="@+id/res_img"
+        android:id="@+id/cat_img"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleType="fitCenter"
@@ -23,7 +23,7 @@
         app:srcCompat="@drawable/jollibee_logo" />
 
     <TextView
-        android:id="@+id/res_title"
+        android:id="@+id/cat_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -35,7 +35,7 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/res_img"
+        app:layout_constraintStart_toEndOf="@+id/cat_img"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -54,8 +54,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/res_img"
-        app:layout_constraintTop_toBottomOf="@+id/res_cat" />
+        app:layout_constraintStart_toEndOf="@+id/cat_img"
+        app:layout_constraintTop_toBottomOf="@+id/cat_cat" />
 
     <TextView
         android:id="@+id/cat_ratings"
@@ -76,7 +76,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/res_cat"
+        android:id="@+id/cat_cat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -85,8 +85,8 @@
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/res_img"
-        app:layout_constraintTop_toBottomOf="@+id/res_title" />
+        app:layout_constraintStart_toEndOf="@+id/cat_img"
+        app:layout_constraintTop_toBottomOf="@+id/cat_title" />
 
     <TextView
         android:id="@+id/textView1000"
@@ -100,7 +100,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/res_img"
+        app:layout_constraintStart_toEndOf="@+id/cat_img"
         app:layout_constraintTop_toBottomOf="@+id/cat_delivery_time"
         app:layout_constraintVertical_bias="0.0" />
 

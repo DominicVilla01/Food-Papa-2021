@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.foodpapa2021.realm.CategoryList;
 import com.example.foodpapa2021.realm.RestaurantList;
 
 import org.androidannotations.annotations.AfterViews;
@@ -46,6 +47,7 @@ public class GetStarted extends AppCompatActivity {
             edit.putString("status", "data_passed");
             edit.apply();
 
+            //RestaurantList
             RestaurantList jollibee = new RestaurantList();
             jollibee.setUuid(UUID.randomUUID().toString());
             jollibee.setRes_name("Jollibee");
@@ -151,7 +153,111 @@ public class GetStarted extends AppCompatActivity {
             racks.setRes_time_distance("36mins • 1.5km");
             racks.setRes_cat("Fast-Casual");
 
+            //CategoryList
+            CategoryList jollibee2 = new CategoryList();
+            jollibee2.setUuid(UUID.randomUUID().toString());
+            jollibee2.setCat_name("Jollibee");
+            jollibee2.setCat_rating("4.6");
+            jollibee2.setCat_time_distance("34mins • 1.4km");
+            jollibee2.setCat_cat("Fast Food");
 
+            CategoryList mcdo2 = new CategoryList();
+            mcdo2.setUuid(UUID.randomUUID().toString());
+            mcdo2.setCat_name("McDo");
+            mcdo2.setCat_rating("4.7");
+            mcdo2.setCat_time_distance("35mins • 1.5km");
+            mcdo2.setCat_cat("Fast Food");
+
+            CategoryList kfc2 = new CategoryList();
+            kfc2.setUuid(UUID.randomUUID().toString());
+            kfc2.setCat_name("KFC");
+            kfc2.setCat_rating("4.5");
+            kfc2.setCat_time_distance("33mins • 1.3km");
+            kfc2.setCat_cat("Fast Food");
+
+            CategoryList wendy2 = new CategoryList();
+            wendy2.setUuid(UUID.randomUUID().toString());
+            wendy2.setCat_name("Wendy's");
+            wendy2.setCat_rating("4.5");
+            wendy2.setCat_time_distance("35mins • 1.4km");
+            wendy2.setCat_cat("Fast Food");
+
+            CategoryList popeyes2 = new CategoryList();
+            popeyes2.setUuid(UUID.randomUUID().toString());
+            popeyes2.setCat_name("Popeyes");
+            popeyes2.setCat_rating("4.5");
+            popeyes2.setCat_time_distance("36mins • 1.5km");
+            popeyes2.setCat_cat("Fast Food");
+
+            CategoryList coco2 = new CategoryList();
+            coco2.setUuid(UUID.randomUUID().toString());
+            coco2.setCat_name("CoCo Fresh Tea & Juice");
+            coco2.setCat_rating("4.6");
+            coco2.setCat_time_distance("33mins • 1.2km");
+            coco2.setCat_cat("Milk Tea");
+
+            CategoryList gongcha2 = new CategoryList();
+            gongcha2.setUuid(UUID.randomUUID().toString());
+            gongcha2.setCat_name("Gongcha");
+            gongcha2.setCat_rating("4.6");
+            gongcha2.setCat_time_distance("33mins • 1.2km");
+            gongcha2.setCat_cat("Milk Tea");
+
+            CategoryList seren2 = new CategoryList();
+            seren2.setUuid(UUID.randomUUID().toString());
+            seren2.setCat_name("Serenitea");
+            seren2.setCat_rating("4.5");
+            seren2.setCat_time_distance("36mins • 1.5km");
+            seren2.setCat_cat("Milk Tea");
+
+            CategoryList macao2 = new CategoryList();
+            macao2.setUuid(UUID.randomUUID().toString());
+            macao2.setCat_name("Macao Imperial Tea");
+            macao2.setCat_rating("4.7");
+            macao2.setCat_time_distance("36mins • 1.5km");
+            macao2.setCat_cat("Milk Tea");
+
+            CategoryList tiger2 = new CategoryList();
+            tiger2.setUuid(UUID.randomUUID().toString());
+            tiger2.setCat_name("Tiger Sugar");
+            tiger2.setCat_rating("4.7");
+            tiger2.setCat_time_distance("36mins • 1.5km");
+            tiger2.setCat_cat("Milk Tea");
+
+            CategoryList tgif2 = new CategoryList();
+            tgif2.setUuid(UUID.randomUUID().toString());
+            tgif2.setCat_name("TGI Fridays");
+            tgif2.setCat_rating("4.8");
+            tgif2.setCat_time_distance("34mins • 1.2km");
+            tgif2.setCat_cat("Fast-Casual");
+
+            CategoryList outback2 = new CategoryList();
+            outback2.setUuid(UUID.randomUUID().toString());
+            outback2.setCat_name("Outback Steakhouse");
+            outback2.setCat_rating("4.7");
+            outback2.setCat_time_distance("32mins • 1.1km");
+            outback2.setCat_cat("Fast-Casual");
+
+            CategoryList claw2 = new CategoryList();
+            claw2.setUuid(UUID.randomUUID().toString());
+            claw2.setCat_name("Claw Daddy");
+            claw2.setCat_rating("4.6");
+            claw2.setCat_time_distance("33mins • 1.2km");
+            claw2.setCat_cat("Fast-Casual");
+
+            CategoryList ital2 = new CategoryList();
+            ital2.setUuid(UUID.randomUUID().toString());
+            ital2.setCat_name("Italianni's");
+            ital2.setCat_rating("4.5");
+            ital2.setCat_time_distance("36mins • 1.5km");
+            ital2.setCat_cat("Fast-Casual");
+
+            CategoryList racks2 = new CategoryList();
+            racks2.setUuid(UUID.randomUUID().toString());
+            racks2.setCat_name("Racks");
+            racks2.setCat_rating("4.7");
+            racks2.setCat_time_distance("36mins • 1.5km");
+            racks2.setCat_cat("Fast-Casual");
 
             realm.beginTransaction();
             realm.copyToRealmOrUpdate(jollibee);
@@ -169,6 +275,21 @@ public class GetStarted extends AppCompatActivity {
             realm.copyToRealmOrUpdate(claw);
             realm.copyToRealmOrUpdate(ital);
             realm.copyToRealmOrUpdate(racks);
+            realm.copyToRealmOrUpdate(jollibee2);
+            realm.copyToRealmOrUpdate(mcdo2);
+            realm.copyToRealmOrUpdate(kfc2);
+            realm.copyToRealmOrUpdate(wendy2);
+            realm.copyToRealmOrUpdate(popeyes2);
+            realm.copyToRealmOrUpdate(coco2);
+            realm.copyToRealmOrUpdate(gongcha2);
+            realm.copyToRealmOrUpdate(seren2);
+            realm.copyToRealmOrUpdate(macao2);
+            realm.copyToRealmOrUpdate(tiger2);
+            realm.copyToRealmOrUpdate(tgif2);
+            realm.copyToRealmOrUpdate(outback2);
+            realm.copyToRealmOrUpdate(claw2);
+            realm.copyToRealmOrUpdate(ital2);
+            realm.copyToRealmOrUpdate(racks2);
 
             realm.commitTransaction();
 
