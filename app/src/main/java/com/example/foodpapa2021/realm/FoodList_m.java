@@ -23,7 +23,7 @@ public class FoodList_m extends RealmObject {
     private Integer m_quantity2;
     private Integer m_quantity3;
     private Integer m_quantity4;
-    
+
     public String getUuid() {
         return uuid;
     }
@@ -128,6 +128,22 @@ public class FoodList_m extends RealmObject {
         this.m_quantity4 = m_quantity4;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "FoodList_m{" +
+                "uuid='" + uuid + '\'' +
+                ", m_name1='" + m_name1 + '\'' +
+                ", m_name2='" + m_name2 + '\'' +
+                ", m_name3='" + m_name3 + '\'' +
+                ", m_name4='" + m_name4 + '\'' +
+                ", m_price1='" + m_price1 + '\'' +
+                ", m_price2='" + m_price2 + '\'' +
+                ", m_price3='" + m_price3 + '\'' +
+                ", m_price4='" + m_price4 + '\'' +
+                ", m_quantity1=" + m_quantity1 +
+                ", m_quantity2=" + m_quantity2 +
+                ", m_quantity3=" + m_quantity3 +
+                ", m_quantity4=" + m_quantity4 +
+                '}';
+    }
 }
