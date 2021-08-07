@@ -58,7 +58,7 @@ public class FastCasualMenu extends RealmRecyclerViewAdapter<FoodList_fc, FastCa
         FoodList_fc fc = getItem(position);
 
         holder.name.setText(fc.getFc_name());
-        holder.price.setText(fc.getFc_price());
+        holder.price.setText(String.valueOf(fc.getFc_price()));
 
         //Fast Food
         if (fc.getFc_name().equals("Baby Back Ribs")) {

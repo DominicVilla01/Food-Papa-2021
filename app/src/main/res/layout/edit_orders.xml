@@ -41,12 +41,12 @@
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/food_detail_add"
+            app:layout_constraintEnd_toStartOf="@+id/order_detail_add"
             app:layout_constraintStart_toEndOf="@+id/order_detail_subtract"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/food_detail_add"
+            android:id="@+id/order_detail_add"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:background="@drawable/signs_background"

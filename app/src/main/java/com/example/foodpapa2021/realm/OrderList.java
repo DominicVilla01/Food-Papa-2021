@@ -8,8 +8,6 @@ public class OrderList extends RealmObject
     @PrimaryKey
     private String uuid;
     private String order_name;
-    private int order_quantity;
-
 
     public String getUuid() {
         return uuid;
@@ -27,6 +25,14 @@ public class OrderList extends RealmObject
         this.order_name = order_name;
     }
 
+    public String getOrder_price() {
+        return order_price;
+    }
+
+    public void setOrder_price(String order_price) {
+        this.order_price = order_price;
+    }
+
     public int getOrder_quantity() {
         return order_quantity;
     }
@@ -35,11 +41,15 @@ public class OrderList extends RealmObject
         this.order_quantity = order_quantity;
     }
 
+    private String order_price;
+    private int order_quantity;
+
     @Override
     public String toString() {
         return "OrderList{" +
                 "uuid='" + uuid + '\'' +
                 ", order_name='" + order_name + '\'' +
+                ", order_price='" + order_price + '\'' +
                 ", order_quantity=" + order_quantity +
                 '}';
     }
