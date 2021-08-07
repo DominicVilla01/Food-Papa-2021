@@ -61,16 +61,14 @@ public class FastCasualMenu extends RealmRecyclerViewAdapter<FoodList_fc, FastCa
         holder.price.setText(fc.getFc_price());
 
         //Fast Food
-        if (fc.getFc_name().equals("TGI Friday's")) {
-            holder.img.setImageResource(R.drawable.tgif_logo);
-        } else if (fc.getFc_name().equals("Outback Steakhouse")) {
-            holder.img.setImageResource(R.drawable.outback_logo);
-        } else if (fc.getFc_name().equals("Claw Daddy")) {
-            holder.img.setImageResource(R.drawable.clawdaddy_logo);
-        } else if (fc.getFc_name().equals("Italianni's")) {
-            holder.img.setImageResource(R.drawable.italiannis_logo);
-        } else if (fc.getFc_name().equals("Racks")) {
-            holder.img.setImageResource(R.drawable.racks_logo);
+        if (fc.getFc_name().equals("Baby Back Ribs")) {
+            holder.img.setImageResource(R.drawable.foodlist_img_outback_ribs);
+        } else if (fc.getFc_name().equals("Caesar Salad")) {
+            holder.img.setImageResource(R.drawable.foodlist_img_outback_salad);
+        } else if (fc.getFc_name().equals("Iced Tea")) {
+            holder.img.setImageResource(R.drawable.foodlist_img_icedtea);
+        } else if (fc.getFc_name().equals("Spaghetti")) {
+            holder.img.setImageResource(R.drawable.foodlist_img_outback_pasta);
         }
 
         holder.fcObj.setTag(fc);
