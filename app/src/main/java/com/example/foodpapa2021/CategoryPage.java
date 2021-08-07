@@ -94,6 +94,7 @@ public class CategoryPage extends AppCompatActivity {
         prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString("res_name", cat.getCat_name());
+        edit.putString("cat_data", cat.getCat_cat());
         edit.apply();
 
         RestaurantPage_.intent(this).start();

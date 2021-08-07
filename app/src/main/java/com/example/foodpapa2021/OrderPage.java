@@ -21,6 +21,7 @@ import android.annotation.SuppressLint;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
@@ -93,11 +94,17 @@ public class OrderPage extends AppCompatActivity {
 
     }
     @Click
-    public void order_page_cart(){
-        SharedPreferences.Editor edit = prefs.edit();
-        edit.putString("location", order_page_location.getText().toString());
-        edit.apply();
-        Cart_.intent(this).start();
+    public void order_page_cart() {
+        String loc = order_page_location.getText().toString();
+
+        if (!loc.equals("")) {
+            SharedPreferences.Editor edit = prefs.edit();
+            edit.putString("location", order_page_location.getText().toString());
+            edit.apply();
+            Cart_.intent(this).start();
+        } else {
+            Toast.makeText(this, "Please enter a location", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Click
@@ -130,6 +137,7 @@ public class OrderPage extends AppCompatActivity {
     @Click
     public void account_settings(){
         EditUser_.intent(this).start();
+        finish();
     }
 
     @Click
@@ -150,6 +158,7 @@ public class OrderPage extends AppCompatActivity {
         prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor edit = prefs.edit();
         edit.putString("res_name", res.getRes_name());
+        edit.putString("cat_data", res.getRes_cat());
         edit.apply();
 
         RestaurantPage_.intent(this).start();

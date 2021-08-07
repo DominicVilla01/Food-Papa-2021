@@ -20,7 +20,6 @@ import org.androidannotations.annotations.ViewById;
 public class Cart extends AppCompatActivity {
     //Variables
     SharedPreferences prefs;
-    boolean paymentMethod;
 
     @ViewById
     TextView cart_page_location;
@@ -60,24 +59,11 @@ public class Cart extends AppCompatActivity {
         else if(location.equals("Within NCR")){
             cart_page_dFee.setText("Php 59.00");
         }
-
-        //Payment Method
-        if(cart_page_pMethod.isChecked()){
-            SharedPreferences.Editor edit = prefs.edit();
-            edit.putBoolean("paymentMethod", true);
-            edit.apply();
-        }
-        else
-        {
-            SharedPreferences.Editor edit = prefs.edit();
-            edit.putBoolean("paymentMethod", false);
-            edit.apply();
-        }
     }
 
     @Click
     public void cart_page_cancel(){
-        finish();
+        OrderPage_.intent(this).start();
     }
 
     @Click
@@ -88,8 +74,23 @@ public class Cart extends AppCompatActivity {
         alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
+                //Payment Method
+                if(cart_page_pMethod.isChecked()){
+                    SharedPreferences.Editor edit = prefs.edit();
+                    edit.putBoolean("paymentMethod", true);
+                    edit.apply();
+                }
+                else
+                {
+                    SharedPreferences.Editor edit = prefs.edit();
+                    edit.putBoolean("paymentMethod", false);
+                    edit.apply();
+                }
+
                 Toast.makeText(Cart.this, "Processed Order", Toast.LENGTH_SHORT).show();
                 ProcessingPage_.intent(Cart.this).start();
+                finish();
             }
         });
         alert.setNegativeButton("No", new DialogInterface.OnClickListener() {

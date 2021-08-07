@@ -183,12 +183,12 @@
         android:layout_width="150dp"
         android:layout_height="45dp"
         android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/dark_orange_background_rounded"
         android:text="Cancel"
         android:textColor="#FFFFFF"
         android:textSize="16dp"
+        app:backgroundTint="#ED6F00"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
 
@@ -198,11 +198,11 @@
         android:layout_height="45dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
         android:background="@drawable/dark_orange_background_rounded"
         android:text="Checkout"
         android:textColor="#FFFFFF"
         android:textSize="16dp"
+        app:backgroundTint="#ED6F00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
 

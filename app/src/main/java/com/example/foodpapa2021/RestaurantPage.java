@@ -45,6 +45,7 @@ public class RestaurantPage extends AppCompatActivity {
 
         prefs = this.getSharedPreferences("prefs", MODE_PRIVATE);
         String res_name = prefs.getString("res_name", null);
+        String cat_data = prefs.getString("cat_data", null);
 
         RestaurantList result = realm.where(RestaurantList.class)
                 .equalTo("res_name", res_name)
